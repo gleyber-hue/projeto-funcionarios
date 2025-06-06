@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     async function carregarFuncionarios() {
         try {
-            const response = await fetch('http://localhost:3002/funcionarios');
+            const response = await fetch('/api/funcionarios');
             if (!response.ok) {
                 throw new Error('Erro ao carregar funcionários');
             }
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 const id = this.getAttribute('data-id');
                 if (confirm('Tem certeza que deseja excluir este funcionário?')) {
                     try {
-                        const response = await fetch(`http://localhost:3002/funcionarios/${id}`, {
+                        const response = await fetch(`/api/funcionarios/${id}`, {
                             method: 'DELETE'
                         });
                         

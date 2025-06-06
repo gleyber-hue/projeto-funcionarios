@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         
         try {
-            const response = await fetch('http://localhost:3002/funcionarios', {
+            const response = await fetch('/api/funcionarios', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     async function carregarFuncionario(id) {
         try {
-            const response = await fetch(`http://localhost:3002/funcionarios/${id}`);
+            const response = await fetch(`/api/funcionarios/${id}`);
             if (!response.ok) throw new Error('Erro ao carregar funcionário');
             console.log(response);
             return await response.json();
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         };
         
         try {
-            const response = await fetch(`http://localhost:3002/funcionarios/${id}`, {
+            const response = await fetch(`/api/funcionarios/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
