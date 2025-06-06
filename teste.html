@@ -1,0 +1,14 @@
+<script>
+async function testarConexao() {
+    try {
+        const response = await fetch('http://localhost:3001/funcionarios');
+        const data = await response.json();
+        console.log('Resposta:', data);
+        alert('Conexão OK! Verifique o console');
+    } catch (error) {
+        console.error('Erro:', error);
+        alert('Erro na conexão: ' + error.message);
+    }
+}
+testarConexao();
+</script>
